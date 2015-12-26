@@ -30,15 +30,33 @@ requirejs.config({
 	}
 });
 
-require([ "jquery" ], function ($) {
+require([ "jquery", "helperMethods" ], function ($, helpers) {
 	"use strict";
+	
+	var items = [
+		{ 
+			image: "images/no.png", 
+			sound: "sounds/no.mp3",
+			id: "no",
+			label: "No",
+		},
+	];
 	
 	/* Remove Global */
 	$.noConflict();
 	
 	/* DOM Variables */
-   	var mainContentContainer = $("#content-container"),
-   	    pageMenuButton       = $("#page-main-menu");
+   	var mainContainer = $("#content-container");
+	
+	/* Setup */	
+	helpers.forEach(items, function (item) {
+		var outer  = $("<div>", { "class": "item" }),
+		    play   = function () { createjs.Sound.play(item.id); },
+		    button = $("<button>", { id: item.id }).click(play).append($("<img>", { src: item.image })),
+		    label  = $("<label>", { "for": item.id }).text(item.label);
 		
-	// 
+		mainContainer.append(outer.append(button).append(label));
+			
+		createjs.Sound.registerSound(item.sound, item.id);
+	});
 });
