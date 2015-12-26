@@ -76,6 +76,12 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 			id: "already-ate",
 			label: "I already ate",
 		},
+		{ 
+			image: "images/cant_tell_me_what_to_do.png", 
+			sound: "sounds/cant_tell_me_what_to_do.mp3",
+			id: "cant-tell-me-what-to-do",
+			label: "Can't tell me what to do, I'm sitting in the back seat. Stop.",
+		},
 	];
 	
 	/* Remove Global */
