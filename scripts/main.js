@@ -112,16 +112,47 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 	
 	/* DOM Variables */
    	var mainContainer = $("#content-container");
+
 	
-	/* Setup */	
+	/* Functions */
+	var createSoundItem = function (item) {
+			return {
+				id: item.id,
+				src: item.sound,
+			};
+		},
+		registered = false,
+		register = function () {
+			if (registered) return;
+			var sounds = helpers.select(items, createSoundItem);		
+			createjs.Sound.registerSounds(sounds);
+			registered = true;
+		};
+		
+	/* Setup */
+	if (!createjs.Sound.initializeDefaultPlugins()) {
+		alert("Soundjs failed to initialize.");
+	}
+	
+	mainContainer.one("click", register);
+	mainContainer.one("touchend", register);
+	
 	helpers.forEach(items, function (item) {
+		var playing = false,
+			endPlay = function () {
+				playing = false;
+			},
+		    play = function () { 
+				if (playing) return;
+				var instance = createjs.Sound.play(item.id); 
+				playing = true;
+				instance.on("complete", endPlay);
+			};
+		
 		var outer  = $("<div>", { "class": "item" }),
-		    play   = function () { createjs.Sound.play(item.id); },
-		    button = $("<button>", { id: item.id }).click(play).append($("<img>", { src: item.image })),
+		    button = $("<button>", { id: item.id }).click(play).on("touchend", play).append($("<img>", { src: item.image })),
 		    label  = $("<label>", { "for": item.id }).text(item.label);
 		
 		mainContainer.append(outer.append(button).append(label));
-			
-		createjs.Sound.registerSound(item.sound, item.id);
 	});
 });

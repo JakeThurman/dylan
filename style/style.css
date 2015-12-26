@@ -24,6 +24,7 @@
 	border-radius: 5px;
 	cursor: pointer;
 	margin: 5px;
+    width: 269px;
 }
 
 .item > * {
@@ -31,7 +32,7 @@
 }
 
 .item > button > img {
-	height: 530px;
+	height: 400px;
 }
 
 .text-content {
@@ -174,7 +175,19 @@ header.fixed {
 	-moz-transition: height .2s ease;
 	-o-transition: height .2s ease;
 	font-family: 'Comfortaa', 'Open Sans', sans-serif;
+	text-align: center;
 	z-index: 100;
+}
+
+@media (orientation: portrait) {
+	header.fixed {
+		height: 44px !important;
+	}
+	
+	header > #site-title {
+		font-size: 3em !important;
+		line-height: 44px !important;
+	}
 }
 
 @media (min-width: 700px) {
@@ -335,7 +348,6 @@ header > #site-title {
 	font-weight: normal;
 	text-decoration: none;
 	color: white;
-	float: left;
 	height: 100%;
 	font-weight: normal;
 	text-align: center;
@@ -362,6 +374,7 @@ button {
 	line-height: 20px;
 	color: #333;
 	white-space: nowrap;
+	cursor: pointer;
 	vertical-align: middle;
 	cursor: pointer;
 	background-color: #eee;
