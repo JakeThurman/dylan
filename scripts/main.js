@@ -33,6 +33,11 @@ requirejs.config({
 require([ "jquery", "helperMethods" ], function ($, helpers) {
 	"use strict";
 	
+	/* 
+	 * Video to MP3 -> http://audio.online-convert.com/convert-to-mp3
+	 * Crop MP3     -> https://mp3cut.net/
+	 */
+	
 	var items = [
 		{ 
 			image: "images/no.png", 
@@ -81,6 +86,24 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 			sound: "sounds/cant_tell_me_what_to_do.mp3",
 			id: "cant-tell-me-what-to-do",
 			label: "Can't tell me what to do, I'm sitting in the back seat. Stop.",
+		},
+		{ 
+			image: "images/twin_turbos.png", 
+			sound: "sounds/twin_turbos.mp3",
+			id: "twin-turbos",
+			label: "You know my mom's car's got twin turbos on it. So does my sister's. She. My Mom drives a fa",
+		},
+		{ 
+			image: "images/sleep.png", 
+			sound: "sounds/sleep.mp3",
+			id: "sleep",
+			label: "I'm trying to sleep man. Stop",
+		},
+		{ 
+			image: "images/hmnono.png", 
+			sound: "sounds/hmnono.mp3",
+			id: "hmnono",
+			label: "HMMNONO HMMNONO",
 		},
 	];
 	
