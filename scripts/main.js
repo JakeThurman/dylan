@@ -136,6 +136,7 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 	
 	mainContainer.one("click", register);
 	mainContainer.one("touchend", register);
+	register();
 	
 	helpers.forEach(items, function (item) {
 		var playing = false,
