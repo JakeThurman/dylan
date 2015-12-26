@@ -44,7 +44,37 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 			image: "images/stupid_map.png", 
 			sound: "sounds/stupid_map.mp3",
 			id: "stupid-map",
-			label: "You start in the word places possible on this stupid map.",
+			label: "You start in the word places possible on this stupid map",
+		},
+		{ 
+			image: "images/foa.png", 
+			sound: "sounds/foa.mp3",
+			id: "foa",
+			label: "Foa",
+		},
+		{ 
+			image: "images/ow.png", 
+			sound: "sounds/ow.mp3",
+			id: "ow",
+			label: "Ow",
+		},
+		{ 
+			image: "images/what_are_you.png", 
+			sound: "sounds/what_are_you.mp3",
+			id: "what-are-you",
+			label: "What are you?",
+		},
+		{ 
+			image: "images/stop.png", 
+			sound: "sounds/stop.mp3",
+			id: "stop",
+			label: "Stop",
+		},
+		{ 
+			image: "images/already_ate.png", 
+			sound: "sounds/already_ate.mp3",
+			id: "already-ate",
+			label: "I already ate",
 		},
 	];
 	

@@ -26,8 +26,12 @@
 	margin: 5px;
 }
 
-.item > button, .item > label {
+.item > * {
 	display: block;
+}
+
+.item > button > img {
+	height: 530px;
 }
 
 .text-content {
