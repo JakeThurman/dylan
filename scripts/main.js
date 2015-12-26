@@ -40,6 +40,12 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 			id: "no",
 			label: "No",
 		},
+		{
+			image: "images/stupid_map.png", 
+			sound: "sounds/stupid_map.mp3",
+			id: "stupid-map",
+			label: "You start in the word places possible on this stupid map.",
+		},
 	];
 	
 	/* Remove Global */
