@@ -151,7 +151,7 @@ require([ "jquery", "helperMethods" ], function ($, helpers) {
 			};
 		
 		var outer  = $("<div>", { "class": "item" }),
-		    button = $("<button>", { id: item.id }).click(play).on("touchend", play).append($("<img>", { src: item.image })),
+		    button = $("<div>", { id: item.id }).click(play).append($("<img>", { src: item.image })),
 		    label  = $("<label>", { "for": item.id }).text(item.label);
 		
 		mainContainer.append(outer.append(button).append(label));
