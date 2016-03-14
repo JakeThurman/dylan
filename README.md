@@ -6,8 +6,6 @@ The current included JS library dependencies (as versioned in *[versions.txt](ve
 
 - [RequireJS](http://www.requirejs.org)
 - [JQuery](http://jquery.com/)
-- [JQuery UI](https://jqueryui.com/)
 - [Jasmine](http://jasmine.github.io/)
-- [Chart.js](http://www.chartjs.org)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-- [Moment](http://momentjs.com/)
+- [Sound.js](http://www.createjs.com/soundjs)
