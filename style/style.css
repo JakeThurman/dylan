@@ -31,7 +31,7 @@
 	display: block;
 }
 
-.item > div > img {
+.item > button > img {
 	height: 400px;
 }
 
